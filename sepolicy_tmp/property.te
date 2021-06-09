@@ -1,0 +1,2 @@
+type hw_version_prop, property_type;
+type timekeep_prop, property_type;

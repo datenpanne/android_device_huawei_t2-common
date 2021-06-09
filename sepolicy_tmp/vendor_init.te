@@ -1,0 +1,6 @@
+r_dir_file(vendor_init, firmware_file)
+
+allow vendor_init wifi_data_file:dir create_dir_perms;
+allow vendor_init proc_kernel_sched:file write;
+allow vendor_init proc_printk:file write;
+allow vendor_init proc_swap:file write;

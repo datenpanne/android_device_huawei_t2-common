@@ -1,0 +1,40 @@
+# Lights
+/sys/devices/soc\.0/gpio-leds\.[a-z0-9]+/leds(/.*)?                       u:object_r:sysfs_leds:s0
+/sys/devices/soc\.0/qcom,camera-led-flash\.[a-z0-9]+/leds(/.*)?           u:object_r:sysfs_leds:s0
+/sys/devices/soc\.0/[a-z0-9]+\.i2c/i2c-[0-9]/[0-9]-[a-z0-9]+/leds(/.*)?   u:object_r:sysfs_leds:s0
+
+# Light hal
+/(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.t2        u:object_r:hal_light_default_exec:s0
+
+# cgroup
+/dev/cpuset(/.*)?                                                         u:object_r:cgroup:s0
+/dev/stune(/.*)?                                                          u:object_r:cgroup:s0
+
+# DRM
+/(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.2-service\.widevine                u:object_r:hal_drm_widevine_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.2-service\.clearkey                u:object_r:hal_drm_clearkey_exec:s0
+/data/vendor/mediadrm(/.*)?                                 u:object_r:media_data_file:s0
+
+# Mount
+/firmware       u:object_r:firmware_file:s0
+/cust           u:object_r:misc_block_file:s0
+/log            u:object_r:log_block_file:s0
+
+# Shell files
+/system/vendor/bin/init\.qcom\.mem\.sh                                    u:object_r:qti_init_shell_exec:s0
+
+# TimeKeep
+/sys/devices/soc\.0/qpnp-rtc-8/rtc/rtc0(/.*)?                           u:object_r:sysfs_rtc:s0
+/(vendor|system/vendor)/bin/timekeep                        u:object_r:timekeep_exec:s0
+
+# Oem Info
+/dev/oinv(/.*)?                                            u:object_r:oeminfo_device:s0
+/dev/socket/oeminfo_nvm                                    u:object_r:oeminfo_socket:s0
+/system/vendor/bin/huawei_version                          u:object_r:oeminfo_exec:s0
+/system/vendor/bin/oeminfo_nvm_server                      u:object_r:oeminfo_exec:s0
+/system/vendor/bin/rmt_oeminfo                             u:object_r:oeminfo_exec:s0
+
+/dev/block/platform/soc.0/7824900.sdhci/mmcblk0p18         u:object_r:fsc_block_device:s0
+/dev/block/platform/soc.0/7824900.sdhci/mmcblk0p9          u:object_r:oem_block_device:s0
+/dev/bluetooth                                             u:object_r:bluetooth_device:s0
+/dev/rfkill                                                u:object_r:rfkill_device:s0
