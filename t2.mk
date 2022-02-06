@@ -188,11 +188,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fs_config_files
 
-# Filesystem
-PRODUCT_PACKAGES += \
-    e2fsck \
-    make_ext4fs
-
 # GPS
 PRODUCT_PACKAGES += \
     gps.msm8916 \

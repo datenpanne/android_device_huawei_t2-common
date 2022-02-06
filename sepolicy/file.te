@@ -1,2 +1,8 @@
-type firmware_file, file_type;
-type tmp_root_mount_file, file_type;
+type proc_swap, fs_type;
+type misc_block_file, file_type;
+type log_block_file, file_type;
+type proc_app_info, file_type, proc_type;
+type proc_kernel_sched, fs_type, proc_type;
+type proc_printk, fs_type, proc_type;
+type sysfs_timekeep, fs_type, sysfs_type;
+type sysfs_msm_subsys, sysfs_type, fs_type;

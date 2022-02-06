@@ -141,7 +141,7 @@ BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom ehci-hcd.park=3
 BOARD_KERNEL_CMDLINE += androidboot.bootdevice=7824900.sdhci
 BOARD_KERNEL_CMDLINE += lpm_levels.sleep_disabled=1
 BOARD_KERNEL_CMDLINE += loop.max_part=7
-BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+#BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_SEPARATED_DT := true
@@ -186,7 +186,7 @@ VENDOR_SECURITY_PATCH := 2017-04-01
 include device/qcom/sepolicy-legacy/sepolicy.mk
 
 BOARD_SEPOLICY_DIRS += \
-    $(COMMON_PATH)/sepolicy_tmp
+    $(COMMON_PATH)/sepolicy
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
